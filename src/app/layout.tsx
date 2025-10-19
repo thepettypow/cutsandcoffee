@@ -29,15 +29,15 @@ export const metadata: Metadata = {
     "buzzcut",
     "barbershop",
   ],
-  metadataBase: new URL("https://cutsandcoffee.vercel.app"),
+  metadataBase: new URL("https://cutsndcoffee.vercel.app"),
   alternates: {
-    canonical: "https://cutsandcoffee.vercel.app",
+    canonical: "https://cutsndcoffee.vercel.app",
   },
   openGraph: {
     title: "Cuts & Coffee — Trust Your Barber",
     description:
       "Barber shop in Calgary: modern, stylish cuts, sharp beard trims, skin fades, and hot shaves.",
-    url: "https://cutsandcoffee.ca",
+    url: "https://cutsndcoffee.vercel.app",
     siteName: "Cuts & Coffee",
     locale: "en_CA",
     type: "website",
@@ -67,7 +67,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Barbershop",
     name: "Cuts & Coffee",
-    url: "https://cutsandcoffee.ca",
+    url: "https://cutsndcoffee.vercel.app",
     telephone: "+1-825-882-4884",
     address: {
       "@type": "PostalAddress",

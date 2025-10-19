@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const host = "https://cutsandcoffee.ca";
+  const host = "https://cutsndcoffee.vercel.app";
   return {
     rules: {
       userAgent: "*",
