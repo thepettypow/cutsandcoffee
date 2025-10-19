@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "buzzcut",
     "barbershop",
   ],
-  metadataBase: new URL("https://cutsandcoffee.ca"),
+  metadataBase: new URL("https://cutsandcoffee.vercel.app"),
   alternates: {
-    canonical: "https://cutsandcoffee.ca",
+    canonical: "https://cutsandcoffee.vercel.app",
   },
   openGraph: {
     title: "Cuts & Coffee — Trust Your Barber",
