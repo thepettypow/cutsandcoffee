@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05203b; /* Deep navy background */
+  --foreground: #ffffff; /* White text */
+  --accent: #da724f; /* Primary accent */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-cardo);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #05203b; /* Keep consistent theme */
+    --foreground: #ffffff;
   }
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cardo), serif;
 }
+
+/* Utility helpers aligned to your brand */
+.section {
+  @apply py-16 sm:py-24;
+}
+.container {
+  @apply max-w-6xl mx-auto px-6 sm:px-8;
+}
+.heading {
+  @apply text-3xl sm:text-5xl font-bold tracking-tight;
+}
+.heading-accent {
+  @apply text-3xl sm:text-5xl font-bold tracking-tight uppercase text-[#da724f];
+}
+/* Premium card styling */
+.lux-card {
+  @apply relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md p-8 sm:p-10 shadow-xl ring-1 ring-white/10;
+}
+.lux-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #da724f, transparent);
+  opacity: 0.9;
+}
+.info-title {
+  @apply text-xl font-bold uppercase tracking-wide;
+}
+.info-text {
+  @apply text-white/80;
+}
+.subheading {
+  @apply text-lg sm:text-xl text-[#da724f] font-bold;
+}
+.service-title {
+  @apply uppercase font-bold text-5xl sm:text-7xl leading-tight;
+}
+.service-desc {
+  @apply text-white/90 text-lg sm:text-xl;
+}
+.service-meta {
+  @apply text-white text-xl sm:text-2xl font-bold;
+}
+.card {
+  @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-bold transition-colors;
+}
+.btn-primary {
+  @apply bg-[#da724f] text-white hover:bg-[#c55e3b];
+}
+.btn-outline {
+  @apply border border-white/20 text-white hover:bg-white/10;
+}
+.nav-link {
+  @apply uppercase tracking-wide text-white/90 px-3 py-1 border-b-2 border-transparent hover:text-white hover:border-[#da724f] transition-colors font-bold;
+}
+.nav-link {
+  @apply uppercase tracking-wide text-white/90 px-3 py-1 border-b-2 border-transparent hover:text-white hover:border-[#da724f] transition-colors font-bold;
+}
+
+/* Hero styles */
+.hero-frame {
+  @apply relative overflow-hidden rounded-[12px] ring-1 ring-white/10 min-h-[520px] sm:min-h-[640px];
+}
+.hero-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20;
+}
+.hero-content {
+  @apply relative flex flex-col items-center gap-2 md:gap-3 px-8 py-24 sm:py-28 text-center;
+}
+.hero-title {
+  @apply uppercase font-bold tracking-tight leading-none text-5xl sm:text-7xl drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)];
+}
+.pro-name {
+  @apply text-white uppercase font-bold leading-none text-5xl sm:text-7xl text-center drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mb-2 sm:mb-4;
+}
+.hero-tagline {
+  @apply max-w-2xl mx-auto text-sm sm:text-base text-white/80;
+}
+/* Accent top line for luxury feel */
+.accent-topline {
+  @apply absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#da724f] to-transparent opacity-90;
+}
+
+/* Hero left-aligned variant */
+.hero-content-left {
+  @apply relative flex flex-col items-start text-left gap-3 md:gap-4 px-8 py-24 sm:py-28;
+}
+.hero-eyebrow {
+  @apply uppercase tracking-wide text-[#da724f] text-xs sm:text-sm font-semibold;
+}
+.hero-overlay-left {
+  @apply absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent;
+}
+.hero-overlay-vignette {
+  @apply absolute inset-0;
+  background: radial-gradient(120% 80% at 50% 50%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.6) 100%);
+}
+
+/* Full-width hero background with bottom fade */
+.hero-full-bg {
+  position: relative;
+  min-height: 580px;
+  background-image: linear-gradient(to bottom, rgba(5, 32, 59, 0) 65%, var(--background) 100%), url('/0217-21.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 640px) {
+  .hero-full-bg { min-height: 720px; }
+}
+
+/* About page full-width hero */
+.about-hero-bg {
+  position: relative;
+  min-height: 580px;
+  background-image: linear-gradient(to bottom, rgba(5, 32, 59, 0) 65%, var(--background) 100%), url('/IMG_2409-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 640px) {
+  .about-hero-bg { min-height: 720px; }
+}
+
+/* Image overlay label for professional cards */
+.image-label {
+  @apply absolute top-3 left-3 bg-black/50 backdrop-blur-sm text-white uppercase text-xs sm:text-sm font-semibold px-3 py-1 rounded-md ring-1 ring-white/10;
+}
+
+/* Map container */
+.map-container {
+  @apply w-full h-64 sm:h-80 overflow-hidden rounded-xl ring-1 ring-white/10;
+}
+.btn-accent-light {
+  @apply bg-white text-[#da724f] hover:bg-white/90 border border-white/40;
+}
+.cta-band {
+  background: linear-gradient(to bottom, var(--background) 0%, #da724f 100%);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.price-row { display: flex; align-items: baseline; gap: 8px; }
+.price-label { text-transform: uppercase; font-weight: 700; font-size: 1.375rem; }
+@media (min-width: 640px) { .price-label { font-size: 1.75rem; } }
+.price-line { flex: 1; border-bottom: 1px solid rgba(255,255,255,0.35); transform: translateY(-0.2em); }
+.price-old { color: rgba(255,255,255,0.6); text-decoration: line-through; font-size: 1.125rem; margin-right: 0.25rem; }
+@media (min-width: 640px) { .price-old { font-size: 1.375rem; } }
+.price-new { color: #da724f; font-weight: 700; font-size: 1.375rem; }
+@media (min-width: 640px) { .price-new { font-size: 1.5rem; } }
