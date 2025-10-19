@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ContactSection() {
   return (
     <section className="section pb-6 sm:pb-8">
@@ -46,9 +48,9 @@ export default function ContactSection() {
             <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
               Call Now
             </a>
-            <a href="/book" className="btn btn-outline" aria-label="Book an appointment">
+            <Link href="/book" className="btn btn-outline" aria-label="Book an appointment">
               Book Online
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Book Now",
   description: "Book your appointment at Cuts & Coffee — sharp, fast, stylish.",
@@ -17,9 +19,9 @@ export default function BookPage() {
             <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
               Call +1 (825) 882-4884
             </a>
-            <a href="/" className="btn btn-outline" aria-label="Back to home">
+            <Link href="/" className="btn btn-outline" aria-label="Back to home">
               Back Home
-            </a>
+            </Link>
           </div>
         </div>
       </section>

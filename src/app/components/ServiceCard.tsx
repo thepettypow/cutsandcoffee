@@ -17,7 +17,7 @@ export default function ServiceCard({ title, description, price, duration, image
     >
       <div className="text-left">
         <h3 className="service-title" itemProp="name">{title.toUpperCase()}</h3>
-        <p className="service-desc mt-3" itemProp="description">"{description}"</p>
+        <p className="service-desc mt-3" itemProp="description">&ldquo;{description}&rdquo;</p>
         <div className="service-meta mt-10">
           — {price} — {duration}
         </div>
