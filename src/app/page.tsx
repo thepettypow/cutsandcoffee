@@ -58,20 +58,26 @@ export default function Home() {
   const professionals = [
     { name: "BEHRAD", image: "/behrad.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/behrad-3/services" },
     { name: "MAZIAR", image: "/maziar.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/maziar-1/services" },
-    { name: "MIZUE", image: "/Mizue.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" },
+    { name: "MIZUE", image: "/Mizue.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/mizue-1/services" },
   ];
 
   return (
     <main className="text-center">
       {/* Hero */}
       <section className="section pb-6 sm:pb-8 hero-full-bg" role="banner" aria-label="Premium barbering at Cuts & Coffee">
+        <div className="hero-top-fade" />
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-title">TRUST YOUR BARBER</h1>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
-                Fastest Appointment
-              </a>
+            <div className="flex flex-col items-center gap-4">
+              <h1 className="hero-title">TRUST YOUR BARBER</h1>
+              <div className="flex justify-center gap-4">
+                <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
+                  Call Now
+                </a>
+                <a href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" className="btn btn-outline" aria-label="Book online with any available barber">
+                  Book Online
+                </a>
+              </div>
             </div>
           </div>
         </div>

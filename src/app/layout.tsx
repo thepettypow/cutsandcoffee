@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     description:
       "Modern barber shop in Calgary offering haircuts, beard grooming, skin fades, and hot shaves.",
   },
+  icons: {
+    icon: "/PNG-LOGO-12.svg",
+  },
   robots: {
     index: true,
     follow: true,

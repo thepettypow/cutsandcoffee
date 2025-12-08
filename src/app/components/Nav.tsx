@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function Nav() {
   const items = [
-    { label: "BOOK NOW", href: "/book" },
     { label: "ABOUT US", href: "/about" },
     { label: "CONTACT US", href: "#contact" },
   ];
