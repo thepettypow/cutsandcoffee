@@ -58,6 +58,7 @@ export default function Home() {
   const professionals = [
     { name: "BEHRAD", image: "/behrad.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/behrad-3/services" },
     { name: "MAZIAR", image: "/maziar.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/maziar-1/services" },
+    { name: "MIZUE", image: "/Mizue.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" },
   ];
 
   return (
@@ -81,41 +82,48 @@ export default function Home() {
          <div className="container">
           <h2 className="heading text-[#da724f] uppercase mb-6">OUR TEAM</h2>
            <p className="subheading mb-4">Choose your professional</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {professionals.map((pro) => (
-              <div key={pro.name}>
-                <h3 className="pro-name">{pro.name}</h3>
-                 <div className="relative">
-                   <Image
-                     src={pro.image}
-                     alt={`${pro.name} — Cuts & Coffee barber`}
-                     width={480}
-                     height={480}
-                     className="w-full h-auto object-cover"
-                   />
-                 </div>
-                 <div className="mt-4">
-                   <a href={pro.bookingLink} className="btn btn-accent-light" aria-label={`Book with ${pro.name}`}>
-                     Book your time
-                   </a>
-                 </div>
-               </div>
-             ))}
-           </div>
-           <div className="mt-10">
-             <h2 className="heading uppercase text-[#da724f] mb-4">FASTEST APPOINTMENT</h2>
-             <div className="flex justify-center">
-               <a
-                 href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services"
-                className="btn btn-accent-light"
-                 aria-label="Book now with any available barber"
-               >
-                 Book now
-               </a>
-             </div>
-             <p className="mt-4 text-white/80">All services include washing, waxing, styling, and neck shaving.</p>
-           </div>
-        </div>
+          <div className="lux-card">
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {professionals.map((pro, idx) => {
+                  const isLastOdd = professionals.length % 2 === 1 && idx === professionals.length - 1;
+                  return (
+                  <div key={pro.name} className={isLastOdd ? "sm:col-span-2 sm:max-w-[480px] sm:mx-auto" : ""}>
+                    <h3 className="pro-name">{pro.name}</h3>
+                     <div className="relative">
+                    <Image
+                      src={pro.image}
+                      alt={`${pro.name} — Cuts & Coffee barber`}
+                      width={480}
+                      height={480}
+                      className="pro-image mx-auto max-w-[320px] sm:max-w-[360px]"
+                    />
+                     </div>
+                     <div className="mt-4">
+                       <a href={pro.bookingLink} className="btn btn-accent-light" aria-label={`Book with ${pro.name}`}>
+                         Book your time
+                       </a>
+                     </div>
+                   </div>
+                  );
+                })}
+              </div>
+              <div className="mt-10">
+                <h2 className="heading uppercase text-[#da724f] mb-4">FASTEST APPOINTMENT</h2>
+                <div className="flex justify-center">
+                  <a
+                    href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services"
+                    className="btn btn-accent-light"
+                    aria-label="Book now with any available barber"
+                  >
+                    Book now
+                  </a>
+                </div>
+                <p className="mt-4 text-white/80">All services include washing, waxing, styling, and neck shaving.</p>
+              </div>
+            </div>
+          </div>
+         </div>
       </section>
 
       {/* Services */}

@@ -107,6 +107,9 @@ body {
 .pro-name {
   @apply text-white uppercase font-bold leading-none text-5xl sm:text-7xl text-center drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mb-2 sm:mb-4;
 }
+.pro-image {
+  @apply w-full h-auto object-cover rounded-xl;
+}
 .hero-tagline {
   @apply max-w-2xl mx-auto text-sm sm:text-base text-white/80;
 }
