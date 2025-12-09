@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ServiceCard from "./components/ServiceCard";
+import PopupModal from "./components/PopupModal";
 import ContactSection from "./components/ContactSection";
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
 
   return (
     <main className="text-center">
+      <PopupModal />
       {/* Hero */}
       <section className="section pb-6 sm:pb-8 hero-full-bg" role="banner" aria-label="Premium barbering at Cuts & Coffee">
         <div className="hero-top-fade" />

@@ -55,7 +55,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="max-w-5xl mx-auto">
-            <h2 className="heading text-[#da724f] uppercase mb-6 sm:mb-8 text-5xl sm:text-6xl">BENEFITS</h2>
+            <h2 id="membership" className="heading text-[#da724f] uppercase mb-6 sm:mb-8 text-5xl sm:text-6xl">BENEFITS</h2>
             <ul className="list-disc list-inside text-white text-lg sm:text-xl space-y-2 mb-6 sm:mb-8">
               <li>Effortless booking for your schedule</li>
               <li>Expert grooming by skilled barbers</li>
