@@ -59,7 +59,6 @@ export default function Home() {
   const professionals = [
     { name: "BEHRAD", image: "/behrad.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/behrad-3/services" },
     { name: "MAZIAR", image: "/maziar.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/maziar-1/services" },
-    { name: "MIZUE", image: "/Mizue.png", bookingLink: "https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/mizue-1/services" },
   ];
 
   return (
