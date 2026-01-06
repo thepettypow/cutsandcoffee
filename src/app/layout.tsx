@@ -109,9 +109,10 @@ export default function RootLayout({
         {children}
         <footer className="py-0">
           <div className="container text-center text-white/60">
-            © Cuts & Coffee, all rights reserved — Designed by <a href="https://easylifeassociates.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">ELA</a>
+            © Cuts & Coffee, all rights reserved — Designed by <a href="https://ela-digitals.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">ELA</a>
           </div>
         </footer>
+        <br />
       </body>
     </html>
   );
