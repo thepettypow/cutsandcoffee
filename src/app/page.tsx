@@ -164,6 +164,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Workshop */}
+      <section className="section">
+        <div className="container">
+          <h2 className="heading text-[#da724f] uppercase mb-12">WORKSHOP</h2>
+          <div className="lux-card">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="w-full md:w-1/2">
+                <div className="relative aspect-square md:aspect-[4/3] rounded-xl overflow-hidden border border-white/10">
+                  <Image
+                    src="/IMG_2409-1.png"
+                    alt="Workshop"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 text-left">
+                <h3 className="text-2xl font-bold mb-4">Workshop Info</h3>
+                <p className="text-white/80 mb-6">
+                  Check out our latest workshop details and join us for an amazing experience. Contact us on Instagram for more information.
+                </p>
+                <a 
+                  href="https://www.instagram.com/cutsandcoffee.ca/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-primary"
+                >
+                  DM on Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact & Hours */}
       <ContactSection />
 
