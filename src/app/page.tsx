@@ -119,7 +119,7 @@ export default function Home() {
                 <h2 className="heading uppercase text-[#da724f] mb-4">FASTEST APPOINTMENT</h2>
                 <div className="flex justify-center">
                   <a
-                    href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services"
+                    href="https://getsquire.com/booking/book/cuts-and-coffee-calgary"
                     className="btn btn-accent-light"
                     aria-label="Book now with any available barber"
                   >
