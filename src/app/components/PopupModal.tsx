@@ -7,13 +7,11 @@ export default function PopupModal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    try {
-      const dismissed = localStorage.getItem("cc_popup_dismissed");
-      if (!dismissed) {
-        const timer = setTimeout(() => setOpen(true), 600);
-        return () => clearTimeout(timer);
-      }
-    } catch {}
+    // const dismissed = localStorage.getItem("cc_popup_dismissed");
+    // if (!dismissed) {
+      const timer = setTimeout(() => setOpen(true), 600);
+      return () => clearTimeout(timer);
+    // }
   }, []);
 
   const close = () => {
