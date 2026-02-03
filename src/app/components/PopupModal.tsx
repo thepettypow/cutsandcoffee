@@ -50,7 +50,7 @@ export default function PopupModal() {
             <p className="text-white/60">for more info click &quot;Membership&quot;</p>
             <div className="flex flex-col gap-3 mt-2">
               <a href="/about#membership" className="btn btn-primary" aria-label="View membership">MEMBERSHIP</a>
-              <a href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" className="btn btn-primary" aria-label="Book online with any available barber">BOOK NOW</a>
+              <a href="https://getsquire.com/booking/book/cuts-and-coffee-calgary" className="btn btn-primary" aria-label="Book online with any available barber">BOOK NOW</a>
             </div>
           </div>
         </div>

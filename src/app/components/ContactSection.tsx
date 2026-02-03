@@ -48,7 +48,7 @@ export default function ContactSection() {
             <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
               Call Now
             </a>
-            <Link href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" className="btn btn-outline" aria-label="Book an appointment">
+            <Link href="https://getsquire.com/booking/book/cuts-and-coffee-calgary" className="btn btn-outline" aria-label="Book an appointment">
               Book Online
             </Link>
           </div>

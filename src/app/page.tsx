@@ -75,7 +75,7 @@ export default function Home() {
                 <a href="tel:+18258824884" className="btn btn-primary" aria-label="Call to book an appointment">
                   Call Now
                 </a>
-                <a href="https://getsquire.com/booking/book/cuts-and-coffee-calgary/barber/any/services" className="btn btn-accent-light" aria-label="Book online with any available barber">
+                <a href="https://getsquire.com/booking/book/cuts-and-coffee-calgary" className="btn btn-accent-light" aria-label="Book online with any available barber">
                   Book Online
                 </a>
               </div>
