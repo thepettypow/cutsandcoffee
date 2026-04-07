@@ -18,7 +18,6 @@ export default function Nav() {
     };
     window.addEventListener("keydown", onKey);
 
-    // Prevent background scroll when menu is open
     document.body.style.overflow = open ? "hidden" : "";
 
     return () => {
@@ -31,23 +30,30 @@ export default function Nav() {
     <nav aria-label="Primary" className="fixed top-4 left-0 right-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between rounded-[12px] border border-white/10 bg-white/5 backdrop-blur-md shadow-lg ring-1 ring-white/10 px-4 sm:px-6 py-2 sm:py-3">
-          {/* Logo (left) */}
           <Link href="/" aria-label="Go to homepage" className="flex items-center gap-3">
             <Image src="/PNG-LOGO-12.svg" alt="Cuts & Coffee logo" width={40} height={40} priority className="w-10 h-10" />
           </Link>
 
-          {/* Desktop tabs (hidden on mobile) */}
-          <ul className="hidden sm:flex items-center gap-4 sm:gap-6">
-            {items.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} className="nav-link">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden sm:flex items-center gap-4 sm:gap-6">
+            <ul className="flex items-center gap-4 sm:gap-6">
+              {items.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="nav-link">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <a 
+              href="https://getsquire.com/booking/book/cuts-and-coffee-calgary" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#da724f] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-[#da724f] transition-all ml-2"
+            >
+              BOOK NOW
+            </a>
+          </div>
 
-          {/* Mobile hamburger */}
           <button
             type="button"
             aria-label="Open menu"
@@ -62,14 +68,12 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Overlay */}
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 bg-black/50 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         aria-hidden={!open}
       />
 
-      {/* Side menu drawer */}
       <div
         className={`fixed inset-y-0 right-0 z-50 w-72 sm:w-80 transform transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -87,8 +91,8 @@ export default function Nav() {
               </svg>
             </button>
           </div>
-          <nav className="mt-4">
-            <ul className="space-y-2">
+          <nav className="mt-4 flex flex-col h-full">
+            <ul className="space-y-2 flex-grow">
               {items.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -100,6 +104,17 @@ export default function Nav() {
                   </Link>
                 </li>
               ))}
+              <li className="pt-4 border-t border-white/10 mt-4">
+                <a 
+                  href="https://getsquire.com/booking/book/cuts-and-coffee-calgary" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-center bg-[#da724f] text-white px-5 py-3 rounded-xl font-bold uppercase tracking-wider hover:bg-opacity-80 transition-all"
+                  onClick={() => setOpen(false)}
+                >
+                  BOOK NOW
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
