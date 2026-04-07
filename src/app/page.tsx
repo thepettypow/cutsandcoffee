@@ -84,18 +84,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Professionals */}
+      {/* Book Appointment Section */}
       <section className="section pt-6 sm:pt-8">
          <div className="container">
           <h2 className="heading text-[#da724f] uppercase mb-8">Book your appointment</h2>
           
           <div className="lux-card">
-            <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+            <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
               
               <img 
                 src="/shop.jpg" 
                 alt="Cuts & Coffee Barbershop" 
-                className="w-full rounded-xl object-cover mb-8 shadow-xl"
+                className="w-full rounded-xl object-cover mb-8 shadow-xl md:hidden"
+              />
+              
+              <img 
+                src="/shop-pc.jpg" 
+                alt="Cuts & Coffee Barbershop" 
+                className="w-full rounded-xl object-cover mb-8 shadow-xl hidden md:block"
               />
               
               <a
@@ -113,6 +119,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Services */}
       <section id="services" className="section">
