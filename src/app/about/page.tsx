@@ -1,4 +1,6 @@
 import ContactSection from "../components/ContactSection";
+import Image from "next/image";
+import aboutHeroPhoto from "../../../2026-04-21 23.17.04.jpg";
 
 export const metadata = {
   title: "About — Cuts & Coffee",
@@ -9,7 +11,16 @@ export default function AboutPage() {
   return (
     <main className="text-center">
       {/* Hero */}
-      <section className="section pb-6 sm:pb-8 about-hero-bg" role="banner" aria-label="About Cuts & Coffee">
+      <section className="section pb-6 sm:pb-8 relative overflow-hidden" role="banner" aria-label="About Cuts & Coffee">
+        <Image
+          src={aboutHeroPhoto}
+          alt="Cuts & Coffee"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-[#05203b]" />
         <div className="container min-h-[580px] sm:min-h-[720px] grid place-items-center">
           <div className="hero-content">
           </div>
